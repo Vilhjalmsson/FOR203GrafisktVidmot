@@ -1,5 +1,3 @@
-# Halldor Jens og Alexander Pall
-
 from Tkinter import *
 import tkMessageBox
 
