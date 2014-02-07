@@ -46,11 +46,13 @@ def buatilnotanda():
 	username = E1.get()
 	if len(password) != 0 and len(username) != 0:
 		with open('passwords.txt', 'r') as my_file:
-			if username != 'deleteall' and username != 'displayall' and username not in my_file.read(): #Til ad koma i veg fyrir ad deleteall commandid haettir ad virka
+			if username != 'deleteall' and username != 'displayall' and username not in my_file.read():
 				with open('passwords.txt', 'a') as my_file:
 					my_file.write(username+':'+password+'\n')
 				with open('passwords.txt', 'r') as my_file:
 					print my_file.read()
+			else:
+				tkMessageBox.showinfo('ERROR', "Notandanafn er nu thegar i notkun!")
 	else:
 		tkMessageBox.showinfo('Error', 'Notandanafn eda Lykilord vantar!')
 #-------------------------------------------------------#
